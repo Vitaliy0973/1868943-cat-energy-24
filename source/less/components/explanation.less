@@ -1,0 +1,43 @@
+.explanation {
+  width: 320px;
+
+  &__wrapper {
+    font-family: "Oswald", sans-serif;
+    font-style: normal;
+    padding: 0 @lateral-retreat 49px @lateral-retreat;
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  &__list {
+    margin-top: 40px;
+  }
+
+  &__item {
+    list-style-type: none;
+    display: flex;
+  }
+
+  &__item:nth-last-child(n + 2) {
+    margin-bottom: 20px;
+  }
+
+  &__image {
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+  }
+
+  &__description {
+    font-family: "Arial", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    color: #444444;
+  }
+}

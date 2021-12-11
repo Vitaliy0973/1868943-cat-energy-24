@@ -1,0 +1,55 @@
+.social-links {
+  background-color: #F2F2F2;
+  &__image {
+    width: 280px;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 32px;
+  }
+
+  &__logo {
+    width: 128px;
+    height: 24px;
+  }
+
+  &__list {
+    height: 63px;
+    box-sizing: border-box;
+    border-top: 1px solid #D9D9D9;
+    border-bottom: 1px solid #D9D9D9;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 5px;
+    padding-left: 73px;
+    padding-right: 81px;
+  }
+
+  &__item {
+    list-style-type: none;
+  }
+
+  &__academy {
+    width: 114px;
+    font-family: "Arial", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 18px;
+    color: #444444;
+    text-decoration: none;
+    display: block;
+    margin-top: 28px;
+    position: relative;
+  }
+
+  .social-links__academy--academy-logo::before {
+    content: "";
+    width: 27px;
+    height: 34px;
+    position: absolute;
+    top: -6px;
+    right: -166px;
+    background-image: url(./../../img/social/icon_html.svg);
+  }
+}
