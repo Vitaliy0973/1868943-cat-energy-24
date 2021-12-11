@@ -1,0 +1,123 @@
+.example {
+  width: 320px;
+  color: #000000;
+  background-color: #EAEAEA;
+
+  &__wrapper {
+    font-family: "Oswald", sans-serif;
+    font-style: normal;
+    padding: 25px @lateral-retreat 40px @lateral-retreat;
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  &__description {
+    font-family: "Arial", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    color: #444444;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__info-block {
+    width: 124px;
+    height: 56px;
+    border: 1px solid #CDCDCD;
+    box-sizing: border-box;
+    border-radius: 3px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__info-title {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  &__info-text {
+    width: 82px;
+    height: 31px;
+    position: absolute;
+    left: 19px;
+    bottom: -19px;
+    font-family: "Arial", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 12px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #444444;
+    background-color: #EAEAEA;
+  }
+
+  &__price {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 34px;
+    margin-bottom: 40px;
+  }
+
+  &__slider-image {
+    width: 280px;
+    height: 232px;
+    margin-bottom: 10px;
+  }
+
+  &__slider-wrapper {
+    margin: 0 auto;
+    width: 210px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__slider-text {
+    width: 49px;
+    height: 30px;
+    box-sizing: border-box;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+  }
+
+  &__slider-line {
+    width: 85px;
+    height: 14px;
+    background-color: #FFFFFF;
+    border: 1px solid #CDCDCD;
+    box-sizing: border-box;
+    border-radius: 6px;
+    padding: 3px 4px;
+  }
+
+  &__slider-green {
+    height: 6px;
+    background-color: @main-color;
+    border-radius: 6px;
+  }
+}

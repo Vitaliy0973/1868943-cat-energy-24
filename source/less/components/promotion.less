@@ -1,0 +1,42 @@
+.promotion {
+  &__wrapper {
+    width: 280px;
+    height: 290px;
+    margin: 35px @lateral-retreat;
+    background-image: url(./../../img/cat-box-mobile.jpg);
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__wrapper::before {
+    content: "";
+    width: 280px;
+    height: 290px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(104, 183, 56, 0.85);
+  }
+
+  &__wrapper svg {
+    margin-top: 58px;
+    z-index: 2;
+  }
+
+  &__text {
+    width: 161px;
+    font-family: "Arial", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-top: 49px;
+    z-index: 2;
+  }
+}

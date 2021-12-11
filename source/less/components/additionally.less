@@ -1,0 +1,76 @@
+.additionally {
+  width: 320px;
+  border: none;
+
+  &__title {
+    font-family: "Oswald", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 26px;
+    color: #000000;
+    margin-left: @lateral-retreat;
+    position: relative;
+  }
+
+  &__title::before {
+    content: "";
+    width: 136px;
+    height: 2px;
+    position: absolute;
+    top: 15px;
+    right: -159px;
+    background-color: @main-color;
+  }
+
+  &__wrapper {
+    padding: 36px @lateral-retreat 41px @lateral-retreat;
+  }
+
+  &__list {
+    font-family: "Oswald", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: #000000;
+    list-style-type: none;
+  }
+
+  &__item {
+    position: relative;
+  }
+
+  &__item:nth-last-child(n+2) {
+    margin-bottom: 24px;
+  }
+
+  &__control {
+    cursor: pointer;
+  }
+
+  &__mark {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #CDCDCD;
+    box-sizing: border-box;
+    position: absolute;
+    top: -2px;
+    left: 0;
+  }
+
+  &__input:checked + .additionally__mark::before {
+    content: "";
+    width: 18px;
+    height: 14px;
+    position: absolute;
+    top: 7px;
+    left: 5px;
+    background-image: url(./../../img/icon-form/check-mark.svg);
+  }
+
+  &__label {
+    font-size: 16px;
+    line-height: 18px;
+    text-transform: uppercase;
+    margin-left: 46px;
+  }
+}

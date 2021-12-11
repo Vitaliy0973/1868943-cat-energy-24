@@ -1,0 +1,57 @@
+.choice-program {
+  width: 320px;
+  border: none;
+
+  &__wrapper {
+    box-sizing: border-box;
+    border-top: 1px solid #D9D9D9;
+    border-bottom: 1px solid #D9D9D9;
+    padding: 28px @lateral-retreat 23px @lateral-retreat;
+  }
+
+  &__list {
+    list-style-type: none;
+  }
+
+  &__item {
+    font-family: "Oswald", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: #222222;
+    margin-left: 45px;
+    position: relative;
+  }
+
+  &__item:nth-last-child(n+2) {
+    margin-bottom: 25px;
+  }
+
+  &__control {
+    cursor: pointer;
+  }
+
+  &__mark {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: -7px;
+    left: -45px;
+    border: 1px solid #CDCDCD;
+    border-radius: 50%;
+    box-sizing: border-box;
+  }
+
+  &__input:checked + .choice-program__mark::before {
+    content: "";
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    top: 7px;
+    left: 7px;
+    background-color: @main-color;
+    border-radius: 50%;
+  }
+}
