@@ -1,10 +1,22 @@
 .social-links {
   background-color: #F2F2F2;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
   &__image {
     width: 280px;
     display: flex;
     justify-content: center;
     padding-bottom: 32px;
+
+    @media (min-width: @tablet-width) {
+      width: 128px;
+      padding-bottom: 0;
+    }
   }
 
   &__logo {
@@ -23,10 +35,41 @@
     padding-top: 5px;
     padding-left: 73px;
     padding-right: 81px;
+
+    @media (min-width: @tablet-width) {
+      min-width: 149px;
+      height: auto;
+      border-top: none;
+      border-bottom: none;
+      padding-top: 2px;
+      padding-left: 20px;
+      padding-right: 0;
+    }
   }
 
   &__item {
     list-style-type: none;
+  }
+
+  &__link--vkontakte svg {
+    @media (min-width: @tablet-width) {
+      width: 35px;
+      height: 23px;
+    }
+  }
+
+  &__link--instagram svg {
+    @media (min-width: @tablet-width) {
+      width: 23px;
+      height: 23px;
+    }
+  }
+
+  &__link--facebook svg {
+    @media (min-width: @tablet-width) {
+      width: 22px;
+      height: 29px;
+    }
   }
 
   &__academy {
@@ -41,6 +84,11 @@
     display: block;
     margin-top: 28px;
     position: relative;
+
+    @media (min-width: @tablet-width) {
+      margin-top: 0;
+      margin-right: 49px;
+    }
   }
 
   .social-links__academy--academy-logo::before {
@@ -51,5 +99,10 @@
     top: -6px;
     right: -166px;
     background-image: url(./../../img/social/icon_html.svg);
+
+    @media (min-width: @tablet-width) {
+      top: -8px;
+      right: -48px;
+    }
   }
 }
