@@ -1,10 +1,39 @@
 .page-footer {
-  width: 320px;
+  &__wrapper {
+    width: @mobile-width;
+    margin: 0 auto;
+
+    @media (min-width: @tablet-width) {
+      width: @tablet-width;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: @desktop-width;
+      position: relative;
+    }
+  }
 
   &__contacts {
     padding: 26px @lateral-retreat;
     display: flex;
     justify-content: space-between;
+
+    @media (min-width: @tablet-width) {
+      padding: 56px 70px 62px 70px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 565px;
+      height: 198px;
+      background-color: #FFFFFF;
+      position: absolute;
+      top: 95px;
+      left: 110px;
+      z-index: 1;
+      padding: 56px 80px;
+      outline: 1px solid #000;
+      box-sizing: border-box;
+    }
   }
 
   &__contacts--form {
@@ -20,6 +49,16 @@
     line-height: 20px;
     text-transform: uppercase;
     color: #111111;
+
+    @media (min-width: @tablet-width) {
+      width: 172px;
+      font-size: 20px;
+      line-height: 26px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-top: 4px;
+    }
   }
 
   &__address {
@@ -30,9 +69,38 @@
     font-size: 14px;
     line-height: 20px;
     color: #444444;
+
+    @media (min-width: @tablet-width) {
+      width: 172px;
+      font-size: 16px;
+      line-height: 20px;
+      text-align: right;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 155px;
+      text-align: left;
+    }
+  }
+
+  &__map {
+    height: 362px;
+    outline: 1px solid orangered;
+
+    @media (min-width: @tablet-width) {
+      height: 400px;
+    }
   }
 
   &__links {
     padding: 39px @lateral-retreat 32px @lateral-retreat;
+
+    @media (min-width: @tablet-width) {
+      padding: 58px @lateral-retreat-tablet 56px @lateral-retreat-tablet;
+    }
+
+    @media (min-width: @tablet-width) {
+      padding: 57px @lateral-retreat-desktop 56px @lateral-retreat-desktop;
+    }
   }
 }

@@ -1,0 +1,69 @@
+.mobile-nav {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.mobile-nav__button {
+  width: 24px;
+  height: 18px;
+  border: none;
+  position: relative;
+  top: 2px;
+  background-image: url(./../../img/logo/burger.svg);
+  background-position: center;
+  cursor: pointer;
+}
+
+.mobile-nav__wrapper {
+  width: 320px;
+  position: absolute;
+  top: 45px;
+  right: -20px;
+  background-color: #FFFFFF;
+  z-index: 4;
+  display: none;
+}
+
+.mobile-nav__input:checked ~ .mobile-nav__wrapper {
+  display: block;
+}
+
+.mobile-nav__input:checked ~ .mobile-nav__button {
+  background-image: url(./../../img/logo/cross.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.mobile-nav__list {
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: uppercase;
+  list-style-type: none;
+}
+
+.mobile-nav__item {
+  padding-top: 22px;
+  padding-bottom: 24px;
+  border-top: 1px solid #E6E6E6;
+  box-sizing: border-box;
+}
+
+.mobile-nav__item:nth-last-child(1) {
+  border-bottom: 1px solid #E6E6E6;
+}
+
+.mobile-nav__link {
+  width: max-content;
+  display: block;
+  text-decoration: none;
+  margin: 0 auto;
+  color: #000000;
+}
