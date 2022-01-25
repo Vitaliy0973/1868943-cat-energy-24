@@ -1,16 +1,38 @@
 .choice-program {
   border: none;
 
+  @media (min-width: @desktop-width) {
+    width: 47.2%;
+  }
+
   &__wrapper {
     box-sizing: border-box;
     border-top: 1px solid #D9D9D9;
     border-bottom: 1px solid #D9D9D9;
     padding-top: 28px;
     padding-bottom: 23px;
+
+    @media (min-width: @tablet-width) {
+      border-top: none;
+      border-bottom: none;
+      padding-top: 48px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-top: 0;
+    }
   }
 
   &__list {
     list-style-type: none;
+
+    @media (min-width: @tablet-width) {
+      min-height: 196px;
+      border: 1px solid #E7E7E7;
+      box-sizing: border-box;
+      padding-top: 29px;
+      padding-left: 43px;
+    }
   }
 
   &__item {
@@ -23,10 +45,19 @@
     color: #222222;
     margin-left: 45px;
     position: relative;
+
+    @media (min-width: @tablet-width) {
+      font-size: 20px;
+      line-height: 30px;
+    }
   }
 
   &__item:nth-last-child(n+2) {
     margin-bottom: 25px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 23px;
+    }
   }
 
   &__control {
@@ -42,6 +73,13 @@
     border: 1px solid #CDCDCD;
     border-radius: 50%;
     box-sizing: border-box;
+
+    @media (min-width: @tablet-width) {
+      width: 40px;
+      height: 40px;
+      top: -5px;
+      left: -60px;
+    }
   }
 
   &__input:checked + .choice-program__mark::before {
@@ -53,5 +91,12 @@
     left: 7px;
     background-color: @main-color;
     border-radius: 50%;
+
+    @media (min-width: @tablet-width) {
+      width: 18px;
+      height: 18px;
+      top: 10px;
+      left: 10px;
+    }
   }
 }

@@ -1,6 +1,26 @@
 .additional-products {
   width: @mobile-width;
   margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: @tablet-width;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @desktop-width;
+  }
+}
+
+.additional-products__header-wrapper {
+  padding: 25px @lateral-retreat 0 @lateral-retreat;
+
+  @media (min-width: @tablet-width) {
+    padding: 67px @lateral-retreat-tablet 0 @lateral-retreat-tablet;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 75px @lateral-retreat-desktop 0 @lateral-retreat-desktop;
+  }
 }
 
 .additional-products__header {
@@ -10,10 +30,19 @@
   font-size: 24px;
   line-height: 24px;
   color: #000000;
-  margin-top: 25px;
-  margin-left: @lateral-retreat;
-  margin-bottom: 34px;
   position: relative;
+  margin-bottom: 34px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    margin-left: 37px;
+    margin-bottom: 80px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 0;
+  }
 }
 
 .additional-products__header::before {
@@ -22,6 +51,50 @@
   height: 2px;
   position: absolute;
   top: 14px;
-  right: 0;
+  right: -20px;
   background-color: @main-color;
+
+  @media (min-width: @tablet-width) {
+    width: 327px;
+    top: 22px;
+    right: -30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 957px;
+    top: 23px;
+    right: -110px;
+  }
+}
+
+.additional-products__header::after {
+  @media (min-width: @tablet-width) {
+    content: "";
+    width: 30px;
+    height: 2px;
+    position: absolute;
+    top: 22px;
+    left: -67px;
+    background-color: @main-color;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 70px;
+    top: 23px;
+    left: -110px;
+  }
+}
+
+.additional-products__wrapper {
+  padding: 0 @lateral-retreat 35px @lateral-retreat;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 @lateral-retreat-tablet 76px @lateral-retreat-tablet;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 @lateral-retreat-desktop 86px @lateral-retreat-desktop;
+  }
 }

@@ -1,5 +1,8 @@
 .last-item {
-  width: @mobile-width;
+  @media (min-width: @tablet-width) {
+    padding-top: 73px;
+    position: relative;
+  }
 
   &__title {
     font-family: "Oswald", sans-serif;
@@ -10,6 +13,14 @@
     text-transform: uppercase;
     color: #222222;
     margin-top: 23px;
+
+    @media (min-width: @tablet-width) {
+      width: 134px;
+      font-size: 20px;
+      line-height: 22px;
+      text-align: center;
+      margin-top: 49px;
+    }
   }
 
   &__structure {
@@ -20,6 +31,14 @@
     line-height: 16px;
     color: #444444;
     margin-top: 8px;
+
+    @media (min-width: @tablet-width) {
+      width: 167px;
+      font-size: 16px;
+      line-height: 18px;
+      text-align: center;
+      margin-top: 23px;
+    }
   }
 }
 
@@ -29,4 +48,23 @@
   align-items: center;
   padding: 25px @lateral-retreat 25px @lateral-retreat;
   border-bottom: 1px solid #EBEBEB;
+
+  @media (min-width: @tablet-width) {
+    padding: 52px 37px 38px 37px;
+    border: 1px solid #EBEBEB;
+    box-sizing: border-box;
+  }
+}
+
+.last-item__wrapper svg {
+  @media (min-width: @tablet-width) {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+.last-item__button {
+  @media (min-width: @tablet-width) {
+    margin-top: 87px;
+  }
 }
