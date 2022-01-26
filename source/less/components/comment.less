@@ -10,6 +10,16 @@
     color: #000000;
     margin-left: @lateral-retreat;
     position: relative;
+
+    @media (min-width: @tablet-width) {
+      font-size: 36px;
+      line-height: 36px;
+      margin-left: 69px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-left: @lateral-retreat-desktop;
+    }
   }
 
   &__title::before {
@@ -20,17 +30,55 @@
     top: 16px;
     right: -180px;
     background-color: @main-color;
+
+    @media (min-width: @tablet-width) {
+      width: 478px;
+      top: 22px;
+      right: -518px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 1108px;
+      right: -1150px;
+    }
+  }
+
+  &__title::after {
+    @media (min-width: @tablet-width) {
+      content: "";
+      width: 30px;
+      height: 2px;
+      position: absolute;
+      top: 22px;
+      left: -69px;
+      background-color: @main-color;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 70px;
+      top: 22px;
+      left: -110px;
+    }
   }
 
   &__wrapper {
     padding-top: 38px;
     padding-bottom: 18px;
+
+    @media (min-width: @tablet-width) {
+      padding-top: 76px;
+      padding-bottom: 63px;
+    }
   }
 
   &__text {
     width: 100%;
     border: 1px solid #E7E7E7;
     box-sizing: border-box;
+
+    @media (min-width: @tablet-width) {
+      min-height: 174px;
+    }
   }
 
   &__text::placeholder {
@@ -44,5 +92,11 @@
     position: absolute;
     top: 9px;
     left: 14px;
+
+    @media (min-width: @tablet-width) {
+      font-size: 20px;
+      line-height: 30px;
+      left: 19px;
+    }
   }
 }

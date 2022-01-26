@@ -1,8 +1,13 @@
 .cat-info {
   border: none;
 
+  @media (min-width: @desktop-width) {
+    width: 47.2%;
+  }
+
   &__wrapper {
     padding-bottom: 24px;
+    padding-left: @lateral-retreat-desktop;
   }
 
   &__list {
@@ -15,6 +20,10 @@
 
   &__item:nth-last-child(n+2) {
     margin-bottom: 14px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 20px;
+    }
   }
 
   &__control {
@@ -29,6 +38,12 @@
     font-size: 16px;
     line-height: 18px;
     margin-right: 12px;
+
+    @media (min-width: @tablet-width) {
+      font-size: 20px;
+      line-height: 30px;
+      margin-right: 18px;
+    }
   }
 
   &__input {
@@ -37,6 +52,10 @@
     border: 1px solid #E7E7E7;
     box-sizing: border-box;
     position: relative;
+
+    @media (min-width: @tablet-width) {
+      height: 52px;
+    }
   }
 
   &__input::placeholder {
@@ -50,5 +69,12 @@
     top: 12px;
     left: 15px;
     overflow: hidden;
+
+    @media (min-width: @tablet-width) {
+      font-size: 20px;
+      line-height: 30px;
+      top: 10px;
+      left: 17px;
+    }
   }
 }

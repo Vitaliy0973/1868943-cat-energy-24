@@ -2,6 +2,14 @@
   border: none;
   margin-top: 26px;
 
+  @media (min-width: @tablet-width) {
+    margin-top: 52px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 45px;
+  }
+
   &__title {
     width: 187px;
     font-family: "Oswald", sans-serif;
@@ -12,6 +20,17 @@
     color: #000000;
     margin-left: @lateral-retreat;
     position: relative;
+
+    @media (min-width: @tablet-width) {
+      width: 512px;
+      font-size: 36px;
+      line-height: 36px;
+      margin-left: 69px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-left: @lateral-retreat-desktop;
+    }
   }
 
   &__title::before {
@@ -22,11 +41,50 @@
     top: 16px;
     right: -113px;
     background-color: @main-color;
+
+    @media (min-width: @tablet-width) {
+      width: 145px;
+      top: 22px;
+      right: -187px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 778px;
+      top: 22px;
+      right: -818px;
+    }
+  }
+
+  &__title::after {
+    @media (min-width: @tablet-width) {
+      content: "";
+      width: 30px;
+      height: 2px;
+      position: absolute;
+      top: 22px;
+      left: -69px;
+      background-color: @main-color;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 70px;
+      top: 22px;
+      left: -110px;
+    }
   }
 
   &__wrapper {
     padding-top: 35px;
     padding-bottom: 23px;
+
+    @media (min-width: @tablet-width) {
+      padding-top: 76px;
+      padding-bottom: 65px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-bottom: 47px;
+    }
   }
 
   &__list {
@@ -35,10 +93,19 @@
     text-transform: uppercase;
     color: #444444;
     list-style-type: none;
+
+    @media (min-width: @desktop-width) {
+      display: flex;
+      justify-content: space-between;
+    }
   }
 
   &__item:nth-last-child(n+2) {
     margin-bottom: 14px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 20px;
+    }
   }
 
   &__control {
@@ -53,6 +120,12 @@
     line-height: 18px;
     margin-right: 11px;
     position: relative;
+
+    @media (min-width: @tablet-width) {
+      font-size: 20px;
+      line-height: 30px;
+      margin-right: 20px;
+    }
   }
 
   &__label--email::before {
@@ -63,6 +136,15 @@
     top: 3px;
     right: -215px;
     background-image: url(./../../img/icon-form/icon-email.svg);
+
+    @media (min-width: @tablet-width) {
+      top: 7px;
+      right: -553px;
+    }
+
+    @media (min-width: @desktop-width) {
+      right: -489px;
+    }
   }
 
   &__label--phone::before {
@@ -73,6 +155,15 @@
     top: 0;
     right: -200px;
     background-image: url(./../../img/icon-form/icon-phone.svg);
+
+    @media (min-width: @tablet-width) {
+      top: 5px;
+      right: -532px;
+    }
+
+    @media (min-width: @desktop-width) {
+      right: -475px;
+    }
   }
 
   &__input {
@@ -80,6 +171,20 @@
     height: 45px;
     border: 1px solid #CDCDCD;
     box-sizing: border-box;
+
+    @media (min-width: @tablet-width) {
+      height: 52px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 486px;
+    }
+  }
+
+  &__input--phone {
+    @media (min-width: @desktop-width) {
+      width: 472px;
+    }
   }
 
   &__input::placeholder {
@@ -93,5 +198,12 @@
     position: absolute;
     top: 13px;
     left: 14px;
+
+    @media (min-width: @tablet-width) {
+      font-size: 20px;
+      line-height: 30px;
+      top: 9px;
+      left: 20px;
+    }
   }
 }

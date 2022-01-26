@@ -1,4 +1,26 @@
 .form-wrapper {
   padding-left: @lateral-retreat;
   padding-right: @lateral-retreat;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 70px;
+    padding-right: 67px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: @lateral-retreat-desktop;
+    padding-right: @lateral-retreat-desktop;
+  }
+}
+
+.form-wrapper__cat-info {
+  @media (min-width: @desktop-width) {
+    padding-right: 0;
+  }
+}
+
+.form-wrapper__choice-program {
+  @media (min-width: @desktop-width) {
+    padding-left: 0;
+  }
 }
