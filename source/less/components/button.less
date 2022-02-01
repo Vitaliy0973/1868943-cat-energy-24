@@ -9,19 +9,35 @@
   @media (min-width: @tablet-width) {
     width: 100%;
   }
+}
 
-  &--add {
-    margin-top: 20px;
-    color: #444444;
-    background-color: #F2F2F2;
-  }
+.button:hover {
+  background-color: #5EAA2F;
+}
 
-  &__text {
-    font-family: "Oswald", sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;
-    text-transform: uppercase;
-  }
+.button:active .button__text {
+  opacity: 0.3;
+}
+
+.button--add {
+  margin-top: 20px;
+  color: #444444;
+  background-color: #F2F2F2;
+}
+
+.button--add:hover {
+  background-color: #EBEBEB;
+}
+
+.button--add:active .button__text {
+  opacity: 0.3;
+}
+
+.button__text {
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
 }

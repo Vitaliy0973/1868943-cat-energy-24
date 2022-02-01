@@ -82,6 +82,18 @@
     }
   }
 
+  &__mark:hover {
+    border: 1px solid #BABABA;
+  }
+
+  &__control:hover .choice-program__mark {
+    border: 1px solid #BABABA;
+  }
+
+  &__control:active {
+    opacity: 0.3;
+  }
+
   &__input:checked + .choice-program__mark::before {
     content: "";
     width: 14px;

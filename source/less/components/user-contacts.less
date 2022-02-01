@@ -1,6 +1,7 @@
 .user-contacts {
   border: none;
   margin-top: 26px;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     margin-top: 52px;
@@ -8,6 +9,24 @@
 
   @media (min-width: @desktop-width) {
     margin-top: 45px;
+  }
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    top: -36px;
+    left: 0;
+    background-color: @main-color;
+
+    @media (min-width: @tablet-width) {
+      top: -15px;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: -14px;
+    }
   }
 
   &__title {
@@ -18,58 +37,25 @@
     font-size: 24px;
     line-height: 26px;
     color: #000000;
-    margin-left: @lateral-retreat;
+    background-color: #FFFFFF;
     position: relative;
+    z-index: 10;
+    padding-left: @lateral-retreat;
+    padding-right: 14px;
+
 
     @media (min-width: @tablet-width) {
       width: 512px;
       font-size: 36px;
       line-height: 36px;
-      margin-left: 69px;
+      padding-right: 42px;
+      padding-left: 39px;
+      margin-left: 30px;
     }
 
     @media (min-width: @desktop-width) {
-      margin-left: @lateral-retreat-desktop;
-    }
-  }
-
-  &__title::before {
-    content: "";
-    width: 99px;
-    height: 2px;
-    position: absolute;
-    top: 16px;
-    right: -113px;
-    background-color: @main-color;
-
-    @media (min-width: @tablet-width) {
-      width: 145px;
-      top: 22px;
-      right: -187px;
-    }
-
-    @media (min-width: @desktop-width) {
-      width: 778px;
-      top: 22px;
-      right: -818px;
-    }
-  }
-
-  &__title::after {
-    @media (min-width: @tablet-width) {
-      content: "";
-      width: 30px;
-      height: 2px;
-      position: absolute;
-      top: 22px;
-      left: -69px;
-      background-color: @main-color;
-    }
-
-    @media (min-width: @desktop-width) {
-      width: 70px;
-      top: 22px;
-      left: -110px;
+      padding-left: 40px;
+      margin-left: 70px;
     }
   }
 
@@ -111,6 +97,7 @@
   &__control {
     display: flex;
     align-items: center;
+    position: relative;
   }
 
   &__label {
@@ -119,7 +106,6 @@
     font-size: 16px;
     line-height: 18px;
     margin-right: 11px;
-    position: relative;
 
     @media (min-width: @tablet-width) {
       font-size: 20px;
@@ -133,17 +119,13 @@
     width: 20px;
     height: 14px;
     position: absolute;
-    top: 3px;
-    right: -215px;
+    top: 16px;
+    right: 15px;
     background-image: url(./../../img/icon-form/icon-email.svg);
 
     @media (min-width: @tablet-width) {
-      top: 7px;
-      right: -553px;
-    }
-
-    @media (min-width: @desktop-width) {
-      right: -489px;
+      top: 18px;
+      right: 16px;
     }
   }
 
@@ -152,25 +134,27 @@
     width: 20px;
     height: 20px;
     position: absolute;
-    top: 0;
-    right: -200px;
+    top: 13px;
+    right: 13px;
     background-image: url(./../../img/icon-form/icon-phone.svg);
 
     @media (min-width: @tablet-width) {
-      top: 5px;
-      right: -532px;
+      top: 15px;
+      right: 16px;
     }
 
     @media (min-width: @desktop-width) {
-      right: -475px;
+      top: 14px;
+      right: 17px;
     }
   }
 
   &__input {
     width: 100%;
     height: 45px;
-    border: 1px solid #CDCDCD;
+    border: 1px solid #E7E7E7;
     box-sizing: border-box;
+    padding-right: 47px;
 
     @media (min-width: @tablet-width) {
       height: 52px;
@@ -179,6 +163,53 @@
     @media (min-width: @desktop-width) {
       width: 486px;
     }
+  }
+
+  &__input:hover {
+    border: 1px solid #CDCDCD;
+  }
+
+  &__input:focus {
+    border: 1px solid #444444;
+  }
+
+  &__control:focus-within .user-contacts__label--email::before {
+    content: "";
+    width: 20px;
+    height: 14px;
+    position: absolute;
+    top: 16px;
+    right: 15px;
+    background-image: url(./../../img/icon-form/icon-email-green.svg);
+
+    @media (min-width: @tablet-width) {
+      top: 18px;
+      right: 16px;
+    }
+  }
+
+  &__control:focus-within .user-contacts__label--phone::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 13px;
+    right: 13px;
+    background-image: url(./../../img/icon-form/icon-phone-green.svg);
+
+    @media (min-width: @tablet-width) {
+      top: 15px;
+      right: 16px;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: 14px;
+      right: 17px;
+    }
+  }
+
+  &__input:invalid:not(:focus):not(:placeholder-shown) {
+    border: 2px solid #FF8282;
   }
 
   &__input--phone {

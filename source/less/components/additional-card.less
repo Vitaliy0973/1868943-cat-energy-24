@@ -14,37 +14,51 @@
 }
 
 .additional-card:nth-child(1) {
-  @media (min-width: @desktop-width) {
-    border-top: 1px solid #CDCDCD;
-  }
+  border-top: 1px solid #CDCDCD;
 }
 
 .additional-card__wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  border-top: 1px solid #CDCDCD;
+  min-height: 130px;
+  border-bottom: 1px solid #CDCDCD;
   box-sizing: border-box;
+  position: relative;
   padding-top: 13px;
   padding-bottom: 17px;
 
   @media (min-width: @tablet-width) {
-    border: 1px solid #CDCDCD;
-    padding: 29px 37px 27px 37px;
+    min-height: 138px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    border-right: 1px solid #CDCDCD;
+    border-left: 1px solid #CDCDCD;
+    padding: 29px 37px 88px 37px;
   }
 
   @media (min-width: @desktop-width) {
     width: 895px;
+    min-height: 72px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 244px;
     flex-wrap: nowrap;
     align-items: center;
     border: none;
     border-bottom: 1px solid #CDCDCD;
-    padding: 15px 0 16px 0;
+    padding: 0 0 0 0;
   }
 }
 
-.additional-card__wrapper:nth-last-child(1) {
-  border-bottom: 1px solid #CDCDCD;
+.additional-card__info-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 180px 93px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .additional-card__title {
@@ -57,10 +71,11 @@
   line-height: 16px;
   text-transform: uppercase;
   color: #222222;
+  padding-left: 1px;
   margin-bottom: 13px;
 
   @media (min-width: @tablet-width) {
-    width: 50%;
+    width: auto;
     font-size: 20px;
     line-height: 20px;
     position: relative;
@@ -69,8 +84,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 34%;
-    margin-top: 6px;
+    top: 0;
   }
 }
 
@@ -78,40 +92,59 @@
   display: block;
 
   @media (min-width: @tablet-width) {
-    width: 35%;
     text-align: end;
   }
 
   @media (min-width: @desktop-width) {
-    width: 18%;
     text-align: left;
-    margin-top: 6px;
+    margin-top: 7px;
   }
 }
 
 .additional-card__price {
   display: block;
+  text-align: end;
 
   @media (min-width: @tablet-width) {
-    width: 14%;
     text-align: end;
   }
   @media (min-width: @desktop-width) {
-    width: 12%;
-    margin-top: 6px;
-    margin-right: 17px;
+    margin-top: 7px;
+    margin-right: 39px;
+  }
+}
+
+.additional-card__button-wrapper {
+  @media (min-width: @tablet-width) {
+    width: -webkit-fill-available;
+    height: 67px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding-right: 37px;
+    padding-left: 37px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: auto;
+    position: static;
+    padding-right: 0;
+    padding-left: 0;
   }
 }
 
 .additional-card__button {
+  width: 100%;
   margin-top: 15px;
 
   @media (min-width: @tablet-width) {
-    margin-top: 21px;
+    bottom: 28px;
+    left: 37px;
+    margin-top: 0;
   }
 
   @media (min-width: @desktop-width) {
     width: 244px;
-    margin-top: 0;
+    margin-top: -1px;
   }
 }

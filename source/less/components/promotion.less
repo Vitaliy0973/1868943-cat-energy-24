@@ -2,30 +2,46 @@
   width: 280px;
   height: 290px;
   background-image: url(./../../img/cat-box-mobile.jpg);
+  background-size: 280px 290px;
   background-repeat: no-repeat;
   box-sizing: border-box;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0 auto;
   margin-top: 35px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url(./../../img/cat-box-mobile@2x.jpg);
+  }
 
   @media (min-width: @tablet-width) {
     width: 707px;
     height: 200px;
     background-image: url(./../../img/cat-box-tablet.jpg);
+    background-size: 707px 200px;
     flex-direction: row;
     justify-content: space-between;
     margin-top: 69px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url(./../../img/cat-box-tablet@2x.jpg);
+    }
   }
 
   @media (min-width: @desktop-width) {
     width: 245px;
     height: 289px;
     background-image: url(./../../img/cat-box-desktop.jpg);
+    background-size: 245px 289px;
     flex-direction: column;
     justify-content: normal;
     margin: 0;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url(./../../img/cat-box-desktop@2x.jpg);
+    }
   }
 }
 
