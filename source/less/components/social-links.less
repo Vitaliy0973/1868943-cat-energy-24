@@ -8,7 +8,6 @@
   }
 
   &__image {
-    width: 280px;
     display: flex;
     justify-content: center;
     padding-bottom: 32px;
@@ -19,9 +18,22 @@
     }
   }
 
+  &__image a {
+    display: block;
+    height: 23px;
+  }
+
   &__logo {
     width: 128px;
     height: 24px;
+  }
+
+  &__logo:hover {
+    opacity: 0.6;
+  }
+
+  &__logo:active {
+    opacity: 0.3;
   }
 
   &__list {
@@ -72,16 +84,25 @@
     }
   }
 
+  &__link:hover svg path {
+    fill: @main-color;
+  }
+
+  &__link--facebook:hover svg path {
+    fill: none;
+    stroke: @main-color;
+  }
+
+  &__link:active svg {
+    opacity: 0.3;
+  }
+
   &__academy {
-    width: 114px;
     font-family: "Arial", sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
-    line-height: 18px;
-    color: #444444;
-    text-decoration: none;
-    display: block;
+    line-height: 20px;
     margin-top: 28px;
     position: relative;
 
@@ -91,18 +112,42 @@
     }
   }
 
-  .social-links__academy--academy-logo::before {
-    content: "";
+  &__academy-text {
+    text-decoration: none;
+    color: #444444;
+  }
+
+  &__academy-text:hover + .social-links__academy-icon svg path {
+    fill: @main-color;
+  }
+
+  &__academy-text:active {
+    opacity: 0.3;
+  }
+
+  &__academy-icon {
     width: 27px;
     height: 34px;
     position: absolute;
     top: -6px;
-    right: -166px;
-    background-image: url(./../../img/social/icon_html.svg);
+    right: 0;
 
     @media (min-width: @tablet-width) {
       top: -8px;
       right: -48px;
     }
+
+    @media (min-width: @desktop-width) {
+      top: -6px;
+      right: -49px;
+    }
+  }
+
+  &__academy-icon:hover svg path {
+    fill: @main-color;
+  }
+
+  &__academy-icon:active {
+    opacity: 0.3;
   }
 }

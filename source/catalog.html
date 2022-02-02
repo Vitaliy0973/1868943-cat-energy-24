@@ -12,38 +12,24 @@
   <header class="page-header">
     <div class="page-header__wrapper">
       <a href="index.html" class="page-header__logo">
-        <img class="page-header__logo-image logo-image" src="./img/logo/logo-mobile.svg" alt="Логотип">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="./img/logo/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="./img/logo/logo-tablet.svg">
+          <img class="page-header__logo-image" src="./img/logo/logo-mobile.svg" alt="Логотип">
+        </picture>
         <img class="page-header__logo-text logo-text" src="./img/logo/logo-mobile-text.svg" alt="Кэт энерджи">
-        <img class="page-header__logo-tablet logo-image" src="./img/logo/logo-tablet.svg" alt="Логотип">
-        <img class="page-header__logo-desktop logo-image" src="./img/logo/logo-desktop.svg" alt="Логотип">
       </a>
-      <nav class="mobile-nav">
-        <input type="checkbox" id="mobil-name-menu" class="mobile-nav__input visually-hidden">
-        <label class="mobile-nav__button" for="mobil-name-menu">
+      <nav class="main-nav main-nav--closed main-nav--nojs">
+        <button class="main-nav__button" type="button">
           <span class="visually-hidden">Открыть меню</span>
-        </label>
-        <div class="mobile-nav__wrapper">
-          <ul class="mobile-nav__list site-list">
-            <li class="mobile-nav__item main-nav__item--activ">
-              <a class="mobile-nav__link" href="index.html">Главная</a>
-            </li>
-            <li class="mobile-nav__item">
-              <a class="mobile-nav__link" href="catalog.html">Каталог продукции</a>
-            </li>
-            <li class="mobile-nav__item">
-              <a class="mobile-nav__link" href="form.html">Подбор программы</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-      <nav class="main-nav">
+        </button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
-            <li class="main-nav__item main-nav__item--activ">
+            <li class="main-nav__item">
               <a class="main-nav__link" href="index.html">Главная</a>
             </li>
             <li class="main-nav__item">
-              <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
+              <a class="main-nav__link main-nav__link--activ-product" href="catalog.html">Каталог продукции</a>
             </li>
             <li class="main-nav__item">
               <a class="main-nav__link" href="form.html">Подбор программы</a>
@@ -62,7 +48,12 @@
         <article class="product-card">
           <div class="product-card__wrapper">
             <div class="product-card__container">
-              <img src="./img/catalog-image/chicken-mini-mobil.png" alt="chicken mini box" class="product-card__image">
+              <div class="product-card__image-wrapper">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="./img/catalog-image/chicken-mini-tablet.png 1x, ./img/catalog-image/chicken-mini-tablet@2x.png">
+                  <img src="./img/catalog-image/chicken-mini-mobil.png" srcset="./img/catalog-image/chicken-mini-mobil@2x.png" alt="chicken mini box" class="product-card__image">
+                </picture>
+              </div>
               <b class="product-card__title">Cat Energy PRO 500 г</b>
               <div class="product-card__structure-block">
                 <span class="product-card__structure">Масса</span>
@@ -81,7 +72,12 @@
         <article class="product-card">
           <div class="product-card__wrapper">
             <div class="product-card__container">
-              <img src="./img/catalog-image/chicken-big-mobil.png" alt="chicken box" class="product-card__image product-card__image--big">
+              <div class="product-card__image-wrapper">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="./img/catalog-image/chicken-big-tablet.png 1x, ./img/catalog-image/chicken-big-tablet@2x.png">
+                  <img src="./img/catalog-image/chicken-big-mobil.png" srcset="./img/catalog-image/chicken-big-mobil@2x.png" alt="chicken box" class="product-card__image product-card__image--big">
+                </picture>
+              </div>
               <b class="product-card__title">Cat Energy PRO 1000 г</b>
               <div class="product-card__structure-block">
                 <span class="product-card__structure">Масса</span>
@@ -100,7 +96,12 @@
         <article class="product-card">
           <div class="product-card__wrapper">
             <div class="product-card__container">
-              <img src="./img/catalog-image/fish-mini-mobil.png" alt="fish mini box" class="product-card__image">
+              <div class="product-card__image-wrapper">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="/img/catalog-image/fish-mini-tablet.png 1x, /img/catalog-image/fish-mini-tablet@2x.png">
+                  <img src="./img/catalog-image/fish-mini-mobil.png" srcset="./img/catalog-image/fish-mini-mobil@2x.png" alt="fish mini box" class="product-card__image">
+                </picture>
+              </div>
               <b class="product-card__title">Cat Energy PRO 500 г</b>
               <div class="product-card__structure-block">
                 <span class="product-card__structure">Масса</span>
@@ -119,7 +120,12 @@
         <article class="product-card">
           <div class="product-card__wrapper">
             <div class="product-card__container">
-              <img src="./img/catalog-image/fish-big-mobil.png" alt="fish box" class="product-card__image product-card__image--big">
+              <div class="product-card__image-wrapper">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="/img/catalog-image/fish-big-tablet.png 1x, /img/catalog-image/fish-big-tablet@2x.png">
+                  <img src="./img/catalog-image/fish-big-mobil.png" srcset="./img/catalog-image/fish-big-mobil@2x.png" alt="fish box" class="product-card__image product-card__image--big">
+                </picture>
+              </div>
               <b class="product-card__title">Cat Energy PRO 1000 г</b>
               <div class="product-card__structure-block">
                 <span class="product-card__structure">Масса</span>
@@ -138,7 +144,12 @@
         <article class="product-card">
           <div class="product-card__wrapper">
             <div class="product-card__container">
-              <img src="./img/catalog-image/buckwheat-mini-mobile.png" alt="buckwheat box" class="product-card__image">
+              <div class="product-card__image-wrapper">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="/img/catalog-image/buckwheat-mini-tablet.png 1x, /img/catalog-image/buckwheat-mini-tablet@2x.png">
+                  <img src="./img/catalog-image/buckwheat-mini-mobile.png" srcset="./img/catalog-image/buckwheat-mini-mobile@2x.png" alt="buckwheat box" class="product-card__image">
+                </picture>
+              </div>
               <b class="product-card__title">Cat Energy slim 500 г</b>
               <div class="product-card__structure-block">
                 <span class="product-card__structure">Масса</span>
@@ -157,7 +168,12 @@
         <article class="product-card">
           <div class="product-card__wrapper">
             <div class="product-card__container">
-              <img src="./img/catalog-image/buckwheat-big-mobile.png" alt="buckwheat box" class="product-card__image product-card__image--big">
+              <div class="product-card__image-wrapper">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="/img/catalog-image/buckwheat-big-tablet.png 1x, /img/catalog-image/buckwheat-big-tablet@2x.png">
+                  <img src="./img/catalog-image/buckwheat-big-mobile.png" srcset="./img/catalog-image/buckwheat-big-mobile@2x.png" alt="buckwheat box" class="product-card__image product-card__image--big">
+                </picture>
+              </div>
               <b class="product-card__title">Cat Energy slim 1000 г</b>
               <div class="product-card__structure-block">
                 <span class="product-card__structure">Масса</span>
@@ -176,7 +192,12 @@
         <article class="product-card">
           <div class="product-card__wrapper">
             <div class="product-card__container">
-              <img src="./img/catalog-image/rice-mini-mobile.png" alt="rice box" class="product-card__image">
+              <div class="product-card__image-wrapper">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="/img/catalog-image/rice-mini-tablet.png 1x, /img/catalog-image/rice-mini-tablet@2x.png">
+                  <img src="./img/catalog-image/rice-mini-mobile.png" srcset="./img/catalog-image/rice-mini-mobile@2x.png" alt="rice box" class="product-card__image">
+                </picture>
+              </div>
               <b class="product-card__title">Cat Energy slim 500 г</b>
               <div class="product-card__structure-block">
                 <span class="product-card__structure">Масса</span>
@@ -214,41 +235,57 @@
           <article class="additional-card">
             <div class="additional-card__wrapper">
               <b class="additional-card__title">Сахарозаменитель</b>
-              <span class="additional-card__product">1 упаковка (100 г)</span>
-              <span class="additional-card__price">200 Р.</span>
-              <button class="additional-card__button button" type="button">
-                <span class="button__text">Заказать</span>
-              </button>
+              <div class="additional-card__info-wrapper">
+                <span class="additional-card__product">1 упаковка (100 г)</span>
+                <span class="additional-card__price">200 Р.</span>
+              </div>
+              <div class="additional-card__button-wrapper">
+                <button class="additional-card__button button" type="button">
+                  <span class="button__text">Заказать</span>
+                </button>
+              </div>
             </div>
           </article>
           <article class="additional-card">
             <div class="additional-card__wrapper">
               <b class="additional-card__title">Питьевая вода</b>
-              <span class="additional-card__product">5 литров</span>
-              <span class="additional-card__price">50 Р.</span>
-              <button class="additional-card__button button" type="button">
-                <span class="button__text">Заказать</span>
-              </button>
+              <div class="additional-card__info-wrapper">
+                <span class="additional-card__product">5 литров</span>
+                <span class="additional-card__price">50 Р.</span>
+              </div>
+              <div class="additional-card__button-wrapper">
+                <button class="additional-card__button button" type="button">
+                  <span class="button__text">Заказать</span>
+                </button>
+              </div>
             </div>
           </article>
           <article class="additional-card">
             <div class="additional-card__wrapper">
               <b class="additional-card__title">Молоко</b>
-              <span class="additional-card__product">1 литр</span>
-              <span class="additional-card__price">100 Р.</span>
-              <button class="additional-card__button button" type="button">
-                <span class="button__text">Заказать</span>
-              </button>
+              <div class="additional-card__info-wrapper">
+                <span class="additional-card__product">1 литр</span>
+                <span class="additional-card__price">100 Р.</span>
+              </div>
+              <div class="additional-card__button-wrapper">
+                <button class="additional-card__button button" type="button">
+                  <span class="button__text">Заказать</span>
+                </button>
+              </div>
             </div>
           </article>
           <article class="additional-card">
             <div class="additional-card__wrapper">
               <b class="additional-card__title">Витамины</b>
-              <span class="additional-card__product">1 упаковка (30 г)</span>
-              <span class="additional-card__price">300 Р.</span>
-              <button class="additional-card__button button" type="button">
-                <span class="button__text">Заказать</span>
-              </button>
+              <div class="additional-card__info-wrapper">
+                <span class="additional-card__product">1 упаковка (30 г)</span>
+                <span class="additional-card__price">300 Р.</span>
+              </div>
+              <div class="additional-card__button-wrapper">
+                <button class="additional-card__button button" type="button">
+                  <span class="button__text">Заказать</span>
+                </button>
+              </div>
             </div>
           </article>
         </div>
@@ -276,15 +313,15 @@
     <div class="page-footer__wrapper">
       <div class="page-footer__contacts page-footer__contacts--form">
         <b class="page-footer__invitation">Приглашаем</br>к сотрудничеству дилеров!</b>
-        <address class="page-footer__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+        <address class="page-footer__address">ул. Большая Конюшенная, д. 19/8 <br><br>Санкт-Петербург</address>
       </div>
       <div class="page-footer__map">
         <script class="footer-map" type="text/javascript" charset="utf-8" async
-        src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aba2a00c086f622d7b1cecd094470585f7cc00c702a940a91db7ad67a4f092ef4&amp;width=320&amp;height=362&amp;lang=ru_RU&amp;scroll=true"></script>
+        src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aba2a00c086f622d7b1cecd094470585f7cc00c702a940a91db7ad67a4f092ef4&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
       </div>
       <div class="page-footer__links social-links">
         <div class="social-links__image">
-          <img class="social-links__logo" src="./img/logo/logo-mobile-text.svg" alt="Кэт энерджи">
+          <a href="index.html"><img class="social-links__logo" src="./img/logo/logo-mobile-text.svg" alt="Кэт энерджи"></a>
         </div>
         <ul class="social-links__list">
           <li class="social-links__item">
@@ -306,11 +343,31 @@
             </a>
           </li>
         </ul>
-        <a href="https://htmlacademy.ru/intensive/adaptive"
-            class="social-links__academy social-links__academy--academy-logo">HTML Academy</a>
+        <div class="social-links__academy social-links__academy--academy-logo">
+          <a class="social-links__academy-text" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+          <a class="social-links__academy-icon" href="https://htmlacademy.ru/intensive/adaptive">
+            <svg width="27" height="34" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.64.02 13.5 0 0 1.4v24.61L13.5 34 27 26.01V1.41L13.64 0Zm11.6 25L13.5 31.96 1.77 25.02v-10.1l11.68 6.93.02 1.25-8.02-4.75v1.23l8.04 4.8.02 1.3-8.05-4.76v1.22l8.04 4.81 8.12-4.83V16.9l3.62-2.15v10.26Zm0-11.57L22 15.33l-1.48.88-7.06-4.19-.01 1.23 6.04 3.57-.06.03-.13.07-.86.5-4.98-2.95-.01 1.22 3.93 2.33-.93.61-.02.01-2.97-1.74-.01 1.23 1.94 1.13-1.98 1.19L1.8 13.58l11.63-6.96 11.8 6.83Zm0-1.22L13.43 5.3 1.77 12.22V2.99L13.5 1.76 25.23 3v9.24Z" fill="#666"/></svg>
+          </a>
+        </div>
       </div>
     </div>
   </footer>
+  <script>
+    let navMain = document.querySelector('.main-nav');
+    let navButton = document.querySelector('.main-nav__button');
+
+    navMain.classList.remove('main-nav--nojs');
+
+    navButton.addEventListener('click', function() {
+      if (navMain.classList.contains('main-nav--closed')) {
+        navMain.classList.remove('main-nav--closed');
+        navMain.classList.add('main-nav--opened');
+      } else {
+        navMain.classList.add('main-nav--closed');
+        navMain.classList.remove('main-nav--opened');
+      }
+    });
+  </script>
 </body>
 
 </html>

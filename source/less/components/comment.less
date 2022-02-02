@@ -1,5 +1,24 @@
 .comment {
   border: none;
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    top: -10px;
+    left: 0;
+    background-color: @main-color;
+
+    @media (min-width: @tablet-width) {
+      top: -15px;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: -14px;
+    }
+  }
 
   &__title {
     font-family: "Oswald", sans-serif;
@@ -8,56 +27,24 @@
     font-size: 24px;
     line-height: 26px;
     color: #000000;
-    margin-left: @lateral-retreat;
+    background-color: #FFFFFF;
     position: relative;
+    z-index: 10;
+    padding-left: @lateral-retreat;
+    padding-right: 23px;
 
     @media (min-width: @tablet-width) {
       font-size: 36px;
       line-height: 36px;
-      margin-left: 69px;
+      padding-right: 40px;
+      padding-left: 39px;
+      margin-left: 30px;
     }
 
     @media (min-width: @desktop-width) {
-      margin-left: @lateral-retreat-desktop;
-    }
-  }
-
-  &__title::before {
-    content: "";
-    width: 157px;
-    height: 2px;
-    position: absolute;
-    top: 16px;
-    right: -180px;
-    background-color: @main-color;
-
-    @media (min-width: @tablet-width) {
-      width: 478px;
-      top: 22px;
-      right: -518px;
-    }
-
-    @media (min-width: @desktop-width) {
-      width: 1108px;
-      right: -1150px;
-    }
-  }
-
-  &__title::after {
-    @media (min-width: @tablet-width) {
-      content: "";
-      width: 30px;
-      height: 2px;
-      position: absolute;
-      top: 22px;
-      left: -69px;
-      background-color: @main-color;
-    }
-
-    @media (min-width: @desktop-width) {
-      width: 70px;
-      top: 22px;
-      left: -110px;
+      padding-right: 42px;
+      padding-left: 40px;
+      margin-left: 70px;
     }
   }
 
@@ -67,6 +54,10 @@
 
     @media (min-width: @tablet-width) {
       padding-top: 76px;
+      padding-bottom: 61px;
+    }
+
+    @media (min-width: @desktop-width) {
       padding-bottom: 63px;
     }
   }
@@ -79,6 +70,14 @@
     @media (min-width: @tablet-width) {
       min-height: 174px;
     }
+  }
+
+  &__text:hover {
+    border: 1px solid #CDCDCD;
+  }
+
+  &__text:focus {
+    border: 1px solid #444444;
   }
 
   &__text::placeholder {

@@ -1,21 +1,123 @@
 .main-nav {
-  display: none;
   position: relative;
-  z-index: 2;
 
   @media (min-width: @tablet-width) {
+    width: 67%;
     display: block;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 42%;
+    position: absolute;
+    right: 111px;
+  }
+}
+
+.main-nav__button {
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  top: -49px;
+  right: 17px;
+  cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.main-nav--closed .main-nav__button::before {
+  content: "";
+  width: 24px;
+  height: 2px;
+  position: absolute;
+  top: 6px;
+  left: 3px;
+  background-color: #000000;
+  box-shadow: 0 8px 0 0 #000000, 0 16px 0 0 #000000;
+}
+
+.main-nav--closed .main-nav__button:hover::before {
+  background-color: fade(#000000, 60%);
+  box-shadow: 0 8px 0 0 fade(#000000, 60%), 0 16px 0 0 fade(#000000, 60%);
+}
+
+.main-nav--closed .main-nav__button:active::before {
+  background-color: fade(#000000, 30%);
+  box-shadow: 0 8px 0 0 fade(#000000, 30%), 0 16px 0 0 fade(#000000, 30%);
+}
+
+@media (max-width: @mobile-width-only) {
+  .main-nav--closed .main-nav__list {
+    display: none;
+  }
+}
+
+.main-nav--opened .main-nav__button {
+  &::before,
+  &::after {
+    content: "";
+    width: 24px;
+    height: 2px;
+    position: absolute;
+    top: 14px;
+    left: 3px;
+    background-color: #000000;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:hover::before,
+  &:hover::after {
+    background-color: fade(#000000, 60%);
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: fade(#000000, 30%);
   }
 }
 
 .main-nav__wrapper {
   @media (min-width: @tablet-width) {
-    width: 441px;
+    min-width: 441px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 479px;
+    min-width: 479px;
+    background-color: transparent;
+    position: relative;
+    z-index: 10;
   }
+}
+
+.main-nav--opened .main-nav__wrapper {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  background-color: #FFFFFF;
+  z-index: 10;
+}
+
+.main-nav--nojs .main-nav__button {
+  display: none;
+}
+
+.main-nav--nojs .main-nav__wrapper {
+  position: static;
+}
+
+.main-nav--nojs .main-nav__list {
+  display: block;
 }
 
 .main-nav__list {
@@ -23,17 +125,18 @@
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
-  line-height: 20px;
+  line-height: 1;
   text-transform: uppercase;
   list-style-type: none;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+
 
   @media (min-width: @tablet-width) {
     font-weight: 400;
     font-size: 18px;
     line-height: 24px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
     position: relative;
     top: 4px;
   }
@@ -42,16 +145,103 @@
     font-size: 20px;
     line-height: 30px;
     top: 1px;
+    justify-content: end;
+  }
+}
+
+.main-nav__item {
+  border-bottom: 1px solid #E6E6E6;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 34px;
+    border-bottom: none;
+  }
+}
+
+.main-nav__item:nth-child(1) {
+  border-top: 1px solid #E6E6E6;
+
+  @media (min-width: @tablet-width) {
+    border-top: none;
   }
 }
 
 .main-nav__link {
+  text-align: center;
   text-decoration: none;
   color: #000000;
+  display: block;
+  padding-top: 22px;
+  padding-bottom: 23px;
+  position: relative;
+
+  @media (min-width: @desktop-width) {
+    padding-top: 16px;
+    padding-bottom: 19px;
+  }
+}
+
+.main-nav__link:hover {
+  opacity: 0.6;
+}
+
+.main-nav__link:active {
+  opacity: 0.3;
 }
 
 .main-nav__link--color {
   @media (min-width: @desktop-width) {
     color: #FFFFFF;
+  }
+}
+
+.main-nav__link--activ::before {
+  @media (min-width: @tablet-width) {
+    content: "";
+    width: 63px;
+    height: 2px;
+    position: absolute;
+    top: 55px;
+    background-color: @main-color;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 70px;
+    top: 51px;
+    background-color: #FFFFFF;
+  }
+}
+
+.main-nav__link--activ-product::before {
+  @media (min-width: @tablet-width) {
+    content: "";
+    width: 154px;
+    height: 2px;
+    position: absolute;
+    top: 50px;
+    background-color: @main-color;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 170px;
+    top: 52px;
+    background-color: @main-color;
+  }
+}
+
+.main-nav__link--activ-form::before {
+  @media (min-width: @tablet-width) {
+    content: "";
+    width: 155px;
+    height: 2px;
+    position: absolute;
+    top: 50px;
+    background-color: @main-color;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 170px;
+    top: 52px;
+    background-color: @main-color;
   }
 }

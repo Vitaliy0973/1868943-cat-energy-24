@@ -18,11 +18,15 @@
     background-color: @main-color;
     border: none;
     box-sizing: border-box;
+    display: block;
+    margin: 0 auto;
     cursor: pointer;
 
     @media (min-width: @tablet-width) {
       width: 282px;
       height: 52px;
+      display: inline-block;
+      margin: 0;
     }
 
     @media (min-width: @desktop-width) {
