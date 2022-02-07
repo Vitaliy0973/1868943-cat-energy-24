@@ -10,231 +10,231 @@
   @media (min-width: @desktop-width) {
     margin-top: 45px;
   }
+}
 
-  &::before {
-    content: "";
-    width: 100%;
-    height: 2px;
-    position: absolute;
-    top: -36px;
-    left: 0;
-    background-color: @main-color;
+.user-contacts::before {
+  content: "";
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  top: -36px;
+  left: 0;
+  background-color: @main-color;
 
-    @media (min-width: @tablet-width) {
-      top: -15px;
-    }
-
-    @media (min-width: @desktop-width) {
-      top: -14px;
-    }
+  @media (min-width: @tablet-width) {
+    top: -15px;
   }
 
-  &__title {
-    width: 187px;
-    font-family: "Oswald", sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 26px;
-    color: #000000;
-    background-color: #FFFFFF;
-    position: relative;
-    z-index: 10;
-    padding-left: @lateral-retreat;
-    padding-right: 14px;
+  @media (min-width: @desktop-width) {
+    top: -14px;
+  }
+}
+
+.user-contacts__title {
+  width: 187px;
+  font-family: "Oswald", "Tahoma", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 26px;
+  color: #000000;
+  background-color: #FFFFFF;
+  position: relative;
+  z-index: 10;
+  padding-left: @lateral-retreat;
+  padding-right: 14px;
 
 
-    @media (min-width: @tablet-width) {
-      width: 512px;
-      font-size: 36px;
-      line-height: 36px;
-      padding-right: 42px;
-      padding-left: 39px;
-      margin-left: 30px;
-    }
-
-    @media (min-width: @desktop-width) {
-      padding-left: 40px;
-      margin-left: 70px;
-    }
+  @media (min-width: @tablet-width) {
+    width: 512px;
+    font-size: 36px;
+    line-height: 36px;
+    padding-right: 42px;
+    padding-left: 39px;
+    margin-left: 30px;
   }
 
-  &__wrapper {
-    padding-top: 35px;
-    padding-bottom: 23px;
+  @media (min-width: @desktop-width) {
+    padding-left: 40px;
+    margin-left: 70px;
+  }
+}
 
-    @media (min-width: @tablet-width) {
-      padding-top: 76px;
-      padding-bottom: 65px;
-    }
+.user-contacts__wrapper {
+  padding-top: 35px;
+  padding-bottom: 23px;
 
-    @media (min-width: @desktop-width) {
-      padding-bottom: 47px;
-    }
+  @media (min-width: @tablet-width) {
+    padding-top: 76px;
+    padding-bottom: 65px;
   }
 
-  &__list {
-    font-family: "Oswald", sans-serif;
-    font-style: normal;
-    text-transform: uppercase;
-    color: #444444;
-    list-style-type: none;
-
-    @media (min-width: @desktop-width) {
-      display: flex;
-      justify-content: space-between;
-    }
+  @media (min-width: @desktop-width) {
+    padding-bottom: 47px;
   }
+}
 
-  &__item:nth-last-child(n+2) {
-    margin-bottom: 14px;
+.user-contacts__list {
+  font-family: "Oswald", "Tahoma", sans-serif;
+  font-style: normal;
+  text-transform: uppercase;
+  color: #444444;
+  list-style-type: none;
 
-    @media (min-width: @tablet-width) {
-      margin-bottom: 20px;
-    }
-  }
-
-  &__control {
+  @media (min-width: @desktop-width) {
     display: flex;
-    align-items: center;
-    position: relative;
+    justify-content: space-between;
+  }
+}
+
+.user-contacts__item:nth-last-child(n+2) {
+  margin-bottom: 14px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 20px;
+  }
+}
+
+.user-contacts__control {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.user-contacts__label {
+  min-width: max-content;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  margin-right: 11px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    margin-right: 20px;
+  }
+}
+
+.user-contacts__label--email::before {
+  content: "";
+  width: 20px;
+  height: 14px;
+  position: absolute;
+  top: 16px;
+  right: 15px;
+  background-image: url(./../../img/icon-form/icon-email.svg);
+
+  @media (min-width: @tablet-width) {
+    top: 18px;
+    right: 16px;
+  }
+}
+
+.user-contacts__label--phone::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 13px;
+  right: 13px;
+  background-image: url(./../../img/icon-form/icon-phone.svg);
+
+  @media (min-width: @tablet-width) {
+    top: 15px;
+    right: 16px;
   }
 
-  &__label {
-    min-width: max-content;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 18px;
-    margin-right: 11px;
+  @media (min-width: @desktop-width) {
+    top: 14px;
+    right: 17px;
+  }
+}
 
-    @media (min-width: @tablet-width) {
-      font-size: 20px;
-      line-height: 30px;
-      margin-right: 20px;
-    }
+.user-contacts__input {
+  width: 100%;
+  height: 45px;
+  border: 1px solid #E7E7E7;
+  box-sizing: border-box;
+  padding-right: 47px;
+
+  @media (min-width: @tablet-width) {
+    height: 52px;
   }
 
-  &__label--email::before {
-    content: "";
-    width: 20px;
-    height: 14px;
-    position: absolute;
-    top: 16px;
-    right: 15px;
-    background-image: url(./../../img/icon-form/icon-email.svg);
+  @media (min-width: @desktop-width) {
+    width: 486px;
+  }
+}
 
-    @media (min-width: @tablet-width) {
-      top: 18px;
-      right: 16px;
-    }
+.user-contacts__input:hover {
+  border: 1px solid #CDCDCD;
+}
+
+.user-contacts__input:focus {
+  border: 1px solid #444444;
+}
+
+.user-contacts__control:focus-within .user-contacts__label--email::before {
+  content: "";
+  width: 20px;
+  height: 14px;
+  position: absolute;
+  top: 16px;
+  right: 15px;
+  background-image: url(./../../img/icon-form/icon-email-green.svg);
+
+  @media (min-width: @tablet-width) {
+    top: 18px;
+    right: 16px;
+  }
+}
+
+.user-contacts__control:focus-within .user-contacts__label--phone::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 13px;
+  right: 13px;
+  background-image: url(./../../img/icon-form/icon-phone-green.svg);
+
+  @media (min-width: @tablet-width) {
+    top: 15px;
+    right: 16px;
   }
 
-  &__label--phone::before {
-    content: "";
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    top: 13px;
-    right: 13px;
-    background-image: url(./../../img/icon-form/icon-phone.svg);
-
-    @media (min-width: @tablet-width) {
-      top: 15px;
-      right: 16px;
-    }
-
-    @media (min-width: @desktop-width) {
-      top: 14px;
-      right: 17px;
-    }
+  @media (min-width: @desktop-width) {
+    top: 14px;
+    right: 17px;
   }
+}
 
-  &__input {
-    width: 100%;
-    height: 45px;
-    border: 1px solid #E7E7E7;
-    box-sizing: border-box;
-    padding-right: 47px;
+.user-contacts__input:invalid:not(:focus):not(:placeholder-shown) {
+  border: 2px solid #FF8282;
+}
 
-    @media (min-width: @tablet-width) {
-      height: 52px;
-    }
-
-    @media (min-width: @desktop-width) {
-      width: 486px;
-    }
+.user-contacts__input--phone {
+  @media (min-width: @desktop-width) {
+    width: 472px;
   }
+}
 
-  &__input:hover {
-    border: 1px solid #CDCDCD;
-  }
+.user-contacts__input::placeholder {
+  font-family: "Oswald", "Tahoma", sans-serif;
+  font-style: normal;
+  font-weight: 400px;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #444444;
+  position: absolute;
+  top: 13px;
+  left: 14px;
 
-  &__input:focus {
-    border: 1px solid #444444;
-  }
-
-  &__control:focus-within .user-contacts__label--email::before {
-    content: "";
-    width: 20px;
-    height: 14px;
-    position: absolute;
-    top: 16px;
-    right: 15px;
-    background-image: url(./../../img/icon-form/icon-email-green.svg);
-
-    @media (min-width: @tablet-width) {
-      top: 18px;
-      right: 16px;
-    }
-  }
-
-  &__control:focus-within .user-contacts__label--phone::before {
-    content: "";
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    top: 13px;
-    right: 13px;
-    background-image: url(./../../img/icon-form/icon-phone-green.svg);
-
-    @media (min-width: @tablet-width) {
-      top: 15px;
-      right: 16px;
-    }
-
-    @media (min-width: @desktop-width) {
-      top: 14px;
-      right: 17px;
-    }
-  }
-
-  &__input:invalid:not(:focus):not(:placeholder-shown) {
-    border: 2px solid #FF8282;
-  }
-
-  &__input--phone {
-    @media (min-width: @desktop-width) {
-      width: 472px;
-    }
-  }
-
-  &__input::placeholder {
-    font-family: "Oswald", sans-serif;
-    font-style: normal;
-    font-weight: 400px;
-    font-size: 16px;
-    line-height: 18px;
-    text-transform: uppercase;
-    color: #444444;
-    position: absolute;
-    top: 13px;
-    left: 14px;
-
-    @media (min-width: @tablet-width) {
-      font-size: 20px;
-      line-height: 30px;
-      top: 9px;
-      left: 20px;
-    }
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    top: 9px;
+    left: 20px;
   }
 }

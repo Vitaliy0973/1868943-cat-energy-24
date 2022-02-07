@@ -19,198 +19,198 @@
   @media (min-width: @desktop-width) {
     width: 1440px;
   }
+}
 
-  &::after {
-    @media (min-width: @desktop-width) {
-      content: "";
-      width: 720px;
-      height: 694px;
-      position: absolute;
-      top: -141px;
-      right: 0;
-      background-image: url(./../../img/index-background-cat-desktop.jpg);
-      background-size: 720px 694px;
-      background-repeat: no-repeat;
-    }
+.preview::after {
+  @media (min-width: @desktop-width) {
+    content: "";
+    width: 720px;
+    height: 694px;
+    position: absolute;
+    top: -141px;
+    right: 0;
+    background-image: url(./../../img/index-background-cat-desktop.jpg);
+    background-size: 720px 694px;
+    background-repeat: no-repeat;
+  }
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("./../../img/index-background-cat-desktop@2x.jpg");
+  }
+}
+
+.preview::before {
+  content: "";
+  width: 100%;
+  height: 302px;
+  position: absolute;
+  top: 0;
+  background-color: rgba(104, 183, 56, 0.85);
+  z-index: 1;
+
+  @media (min-width: @tablet-width) {
+    content: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    content: "";
+    width: 720px;
+    height: 694px;
+    top: -141px;
+    right: 0;
+    left: auto;
+    background-color: rgba(104, 183, 56, 0.85);
+  }
+}
+
+.preview__wrapper {
+  padding-top: 27px;
+  padding-left: @lateral-retreat;
+  padding-right: @lateral-retreat;
+  font-family: "Oswald", "Tahoma", sans-serif;
+  font-style: normal;
+
+  @media (min-width: @tablet-width) {
+    min-height: 810px;
+    padding-top: 35px;
+    padding-left: @lateral-retreat-tablet;
+    padding-right: @lateral-retreat-tablet;
+    background-image: url(./../../img/index-can-tablet.jpg);
+    background-size: 709px 609px;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: bottom;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("./../../img/index-background-cat-desktop@2x.jpg");
+      background-image: url(./../../img/index-can-tablet@2x.jpg);
     }
   }
 
-  &::before {
-    content: "";
-    width: 100%;
-    height: 302px;
-    position: absolute;
+  @media (min-width: @desktop-width) {
+    min-height: 553px;
+    padding-top: 82px;
+    padding-left: @lateral-retreat-desktop;
+    padding-right: @lateral-retreat-desktop;
+    background-image: url(./../../img/index-can-desktop.png);
+    background-size: 552px 499px;
+    background-repeat: no-repeat;
+    background-position-x: 558px;
+    background-position-y: 0;
+    position: relative;
+    z-index: 2;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url(./../../img/index-can-desktop@2x.png);
+    }
+  }
+}
+
+.preview__title {
+  width: 249px;
+  display: block;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+  text-align: center;
+  color: #FFFFFF;
+  position: relative;
+  z-index: 2;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: 414px;
+    font-size: 60px;
+    line-height: 60px;
+    text-align: start;
+    color: #000000;
+    padding-left: 87px;
+    margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 80px;
+  }
+}
+
+.preview__slogan {
+  display: block;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #FFFFFF;
+  margin-top: 25px;
+  margin-bottom: 29px;
+  position: relative;
+  z-index: 2;
+
+  @media (min-width: @tablet-width) {
+    width: max-content;
+    font-size: 20px;
+    line-height: 20px;
+    color: #000000;
+    padding-left: 89px;
+    margin-top: 41px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 80px;
+    margin-top: 40px;
+  }
+}
+
+.preview__image {
+  width: 280px;
+  height: 270px;
+  position: relative;
+  left: 50%;
+  margin-left: -140px;
+  z-index: 2;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.preview__button {
+  min-width: 280px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: @main-color;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  position: relative;
+  top: -2px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    min-width: auto;
+    width: 244px;
+    height: 54px;
+    font-size: 20px;
+    line-height: 20px;
+    margin-top: 49px;
+    margin-left: 90px;
     top: 0;
-    background-color: rgba(104, 183, 56, 0.85);
-    z-index: 1;
-
-    @media (min-width: @tablet-width) {
-      content: none;
-    }
-
-    @media (min-width: @desktop-width) {
-      content: "";
-      width: 720px;
-      height: 694px;
-      top: -141px;
-      right: 0;
-      left: auto;
-      background-color: rgba(104, 183, 56, 0.85);
-    }
   }
 
-  &__wrapper {
-    padding-top: 27px;
-    padding-left: @lateral-retreat;
-    padding-right: @lateral-retreat;
-    font-family: "Oswald", sans-serif;
-    font-style: normal;
-
-    @media (min-width: @tablet-width) {
-      min-height: 810px;
-      padding-top: 35px;
-      padding-left: @lateral-retreat-tablet;
-      padding-right: @lateral-retreat-tablet;
-      background-image: url(./../../img/index-can-tablet.jpg);
-      background-size: 709px 609px;
-      background-repeat: no-repeat;
-      background-position-x: center;
-      background-position-y: bottom;
-
-      @media (min-resolution: 2dppx) {
-        background-image: url(./../../img/index-can-tablet@2x.jpg);
-      }
-    }
-
-    @media (min-width: @desktop-width) {
-      min-height: 553px;
-      padding-top: 82px;
-      padding-left: @lateral-retreat-desktop;
-      padding-right: @lateral-retreat-desktop;
-      background-image: url(./../../img/index-can-desktop.png);
-      background-size: 552px 499px;
-      background-repeat: no-repeat;
-      background-position-x: 558px;
-      background-position-y: 0;
-      position: relative;
-      z-index: 2;
-
-      @media (min-resolution: 2dppx) {
-        background-image: url(./../../img/index-can-desktop@2x.png);
-      }
-    }
+  @media (min-width: @desktop-width) {
+    margin-top: 52px;
+    margin-left: 80px;
   }
+}
 
-  &__title {
-    width: 249px;
-    display: block;
-    font-weight: 400;
-    font-size: 36px;
-    line-height: 36px;
-    text-align: center;
-    color: #FFFFFF;
-    position: relative;
-    z-index: 2;
-    margin: 0 auto;
+.preview__button:hover {
+  background-color: #5EAA2F;
+}
 
-    @media (min-width: @tablet-width) {
-      width: 414px;
-      font-size: 60px;
-      line-height: 60px;
-      text-align: start;
-      color: #000000;
-      padding-left: 87px;
-      margin: 0;
-    }
-
-    @media (min-width: @desktop-width) {
-      padding-left: 80px;
-    }
-  }
-
-  &__slogan {
-    display: block;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 14px;
-    text-transform: uppercase;
-    text-align: center;
-    color: #FFFFFF;
-    margin-top: 25px;
-    margin-bottom: 29px;
-    position: relative;
-    z-index: 2;
-
-    @media (min-width: @tablet-width) {
-      width: max-content;
-      font-size: 20px;
-      line-height: 20px;
-      color: #000000;
-      padding-left: 89px;
-      margin-top: 41px;
-    }
-
-    @media (min-width: @desktop-width) {
-      padding-left: 80px;
-      margin-top: 40px;
-    }
-  }
-
-  &__image {
-    width: 280px;
-    height: 270px;
-    position: relative;
-    left: 50%;
-    margin-left: -140px;
-    z-index: 2;
-
-    @media (min-width: @tablet-width) {
-      display: none;
-    }
-  }
-
-  &__button {
-    min-width: 280px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: @main-color;
-    text-decoration: none;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 18px;
-    text-transform: uppercase;
-    color: #FFFFFF;
-    position: relative;
-    top: -2px;
-    margin: 0 auto;
-
-    @media (min-width: @tablet-width) {
-      min-width: auto;
-      width: 244px;
-      height: 54px;
-      font-size: 20px;
-      line-height: 20px;
-      margin-top: 49px;
-      margin-left: 90px;
-      top: 0;
-    }
-
-    @media (min-width: @desktop-width) {
-      margin-top: 52px;
-      margin-left: 80px;
-    }
-
-    &:hover {
-      background-color: #5EAA2F;
-    }
-
-    &:active span {
-      opacity: 0.3;
-    }
-  }
+.preview__button:active span {
+  opacity: 0.3;
 }

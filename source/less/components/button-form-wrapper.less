@@ -10,65 +10,73 @@
   @media (min-width: @desktop-width) {
     padding-bottom: 82px;
   }
+}
 
-  &__button {
-    width: 280px;
-    height: 40px;
-    color: #FFFFFF;
-    background-color: @main-color;
-    border: none;
-    box-sizing: border-box;
-    display: block;
-    margin: 0 auto;
-    cursor: pointer;
+.button-form-wrapper__button {
+  width: 280px;
+  height: 40px;
+  color: #FFFFFF;
+  background-color: @main-color;
+  border: none;
+  box-sizing: border-box;
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
 
-    @media (min-width: @tablet-width) {
-      width: 282px;
-      height: 52px;
-      display: inline-block;
-      margin: 0;
-    }
-
-    @media (min-width: @desktop-width) {
-      width: 568px;
-      margin-right: 83px;
-    }
+  @media (min-width: @tablet-width) {
+    width: 282px;
+    height: 52px;
+    display: inline-block;
+    margin: 0;
   }
 
-  &__title {
-    font-family: "Oswald", sans-serif;
-    font-style: normal;
-    font-weight: 400;
+  @media (min-width: @desktop-width) {
+    width: 568px;
+    margin-right: 83px;
+  }
+}
+
+.button-form-wrapper__button:hover {
+  background-color: #5EAA2F;
+}
+
+.button-form-wrapper__button:active .button-form-wrapper__title {
+  opacity: 0.3;
+}
+
+.button-form-wrapper__title {
+  font-family: "Oswald", "Tahoma", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+.button-form-wrapper__conditions {
+  max-width: max-content;
+  display: block;
+  font-family: "Arial", "Tahoma", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: #000000;
+  margin: 21px auto 0 auto;
+
+  @media (min-width: @tablet-width) {
     font-size: 16px;
-    line-height: 20px;
-    text-transform: uppercase;
-
-    @media (min-width: @tablet-width) {
-      font-size: 20px;
-      line-height: 24px;
-    }
+    line-height: 16px;
+    margin-top: 0;
+    margin-right: 107px;
   }
 
-  &__conditions {
-    max-width: max-content;
-    display: block;
-    font-family: "Arial", sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 16px;
-    color: #000000;
-    margin: 21px auto 0 auto;
-
-    @media (min-width: @tablet-width) {
-      font-size: 16px;
-      line-height: 16px;
-      margin-top: 0;
-      margin-right: 107px;
-    }
-
-    @media (min-width: @desktop-width) {
-      margin: 0;
-    }
+  @media (min-width: @desktop-width) {
+    margin: 0;
   }
 }

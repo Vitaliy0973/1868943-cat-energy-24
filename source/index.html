@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>HTML Academy: Кэт энерджи</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <link rel="icon" href="favicon.ico"> <!-- 16×16 -->
   <link rel="icon" href="favicon-32x32.png"> <!-- 32×32 -->
   <link rel="icon" href="img/favicons/152.svg" type="image/svg+xml">
@@ -52,7 +52,10 @@
           питание для котов</h2>
         <p class="preview__slogan">Занялся собой? Займись котом!</p>
         <img src="./img/index-can-mobile.png" srcset="./img/index-can-mobile@2x.png 2x" alt="Стакан с кормом" class="preview__image">
-        <a href="form.html" class="preview__button"><span>Подобрать программу</span></a>
+        <a href="form.html" class="preview__button">
+          <!-- Этот <span> нужен для того, что бы наложить opacity только на текст, не затрагивая зеленый фон кнопки, как указано в Styleguide. -->
+          <span>Подобрать программу</span>
+        </a>
       </div>
     </section>
     <section class="programs">
@@ -138,13 +141,13 @@
         <div class="example__slider">
           <div class="example__slider-mobile-wrapper">
             <label class="example__slider-control">
-              <input class="visually-hidden example__slider-input example__slider-input--on" type="radio" name="img-button" checked></input>
+              <input class="visually-hidden example__slider-input example__slider-input--on" type="radio" name="img-button" checked>
               <span class="example__slider-mark"></span>
               <span class="example__slider-text">Было</span>
             </label>
             <div class="example__slider-mobile-line"></div>
             <label class="example__slider-control">
-              <input class="visually-hidden example__slider-input example__slider-input--off" type="radio" name="img-button"></input>
+              <input class="visually-hidden example__slider-input example__slider-input--off" type="radio" name="img-button">
               <span class="example__slider-mark"></span>
               <span class="example__slider-text">Стало</span>
             </label>
@@ -167,12 +170,11 @@
   <footer class="page-footer">
     <div class="page-footer__wrapper">
       <div class="page-footer__contacts">
-        <b class="page-footer__invitation">Приглашаем</br>к сотрудничеству дилеров!</b>
+        <b class="page-footer__invitation">Приглашаем<br>к сотрудничеству дилеров!</b>
         <address class="page-footer__address">ул. Большая Конюшенная, д. 19/8 <br><br>Санкт-Петербург</address>
       </div>
       <div class="page-footer__map">
-        <script class="footer-map" type="text/javascript" charset="utf-8" async
-        src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aba2a00c086f622d7b1cecd094470585f7cc00c702a940a91db7ad67a4f092ef4&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2826.425314895069!2d30.32028543676539!3d59.93903639102024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1644259086084!5m2!1sru!2sru" width="100" height="100" style="border: 0; width: 100%; height: 100%;" allowfullscreen="" loading="lazy"></iframe>
       </div>
       <div class="page-footer__links social-links">
         <div class="social-links__image">
